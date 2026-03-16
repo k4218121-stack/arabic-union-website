@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>اتحاد الطلاب لجامعة اسنيورت | Esenyurt Üniversitesi Arap Öğrenci Birliği</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <meta name="description"
+        content="الموقع الرسمي لاتحاد الطلاب لجامعة اسنيورت - Esenyurt Üniversitesi Arap Öğrenci Birliği. يقدم ملخصات دراسية، كتب PDF، أخبار الجامعة، وخدمات للطلاب العرب في Istanbul Esenyurt University.">
+    <meta name="keywords"
+        content="اتحاد الطلاب لجامعة اسنيورت, Esenyurt Üniversitesi Arap Öğrenci Birliği, جامعة إسنيورت, ملخصات دراسية, كتب PDF, أخبار الجامعة, دعم الطلاب العرب, Istanbul Esenyurt University">
+    <meta name="author" content="اتحاد الطلاب لجامعة اسنيورت - Esenyurt Üniversitesi Arap Öğrenci Birliği">
+    <meta name="robots" content="noindex, follow">
+    <meta property="og:title" content="اتحاد الطلاب لجامعة اسنيورت | Esenyurt Üniversitesi Arap Öğrenci Birliği">
+    <meta property="og:description"
+        content="الموقع الرسمي لاتحاد الطلاب العرب في جامعة إسطنبول إسنيورت. ملخصات، كتب PDF، أخبار، ودعم أكاديمي شامل.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="og:image" content="union_logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-pEcV3Y6XQ6kqvKQ1qKjQ2p6b0Y1Ykq2l1q3X1q3X1q3X1q3X1q3X1q3X1q3X1q3X" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Welcome Popup Modal -->
+    <div id="welcomePopup" class="welcome-popup-overlay">
+        <div class="welcome-popup-box">
+            <!-- Close Button -->
+            <button class="welcome-popup-close" onclick="closeWelcomePopup()" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Popup Content -->
+            <div class="welcome-popup-content">
+                <!-- Logo -->
+                <div class="welcome-popup-logo">
+                    <img src="union_logo.png" alt="شعار الاتحاد">
+                </div>
+
+                <!-- Welcome Text -->
+                <h2 class="welcome-popup-title" data-ar="أهلاً بكم في اتحاد الطلبة العرب"
+                    data-tr="Arap Öğrenci Birliği'ne Hoş Geldiniz">
+                    🎉 Arap Öğrenci Birliği'ne Hoş Geldiniz
+                </h2>
+
+                <p class="welcome-popup-subtitle" data-ar="جامعة إسنيورت" data-tr="Esenyurt Üniversitesi">
+                    Esenyurt Üniversitesi
+                </p>
+
+                <p class="welcome-popup-desc"
+                    data-ar="منصتكم الرسمية للحصول على آخر الأخبار والخدمات الطلابية والموارد الأكاديمية. نحن هنا لدعمكم طوال رحلتكم الجامعية!"
+                    data-tr="Resmi platformunuz, en son haberler, öğrenci hizmetleri ve akademik kaynaklar için. Üniversite yolculuğunuz boyunca sizi desteklemek için buradayız!">
+                    Resmi platformunuz, en son haberler, öğrenci hizmetleri ve akademik kaynaklar için. Üniversite
+                    yolculuğunuz boyunca sizi desteklemek için buradayız!
+                </p>
+
+                <!-- Buttons -->
+                <div class="welcome-popup-buttons">
+                    <a href="https://drive.google.com/file/d/1xyVXrFeDD9G1Tj-BmrJ5Ln7UNHDqkPRm/view?usp=drive_link"
+                        target="_blank" class="welcome-btn-primary" data-ar="📜 النظام الداخلي"
+                        data-tr="📜 İç Yönetmelik">
+                        📜 İç Yönetmelik
+                    </a>
+                    <button class="welcome-btn-secondary" onclick="closeWelcomePopup()" data-ar="استكشف الموقع"
+                        data-tr="Siteyi Keşfet">
+                        🚀 Siteyi Keşfet
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="union-header">
+        <img src="union_logo.png" alt="شعار اتحاد الطلاب لجامعة اسنيورت - Esenyurt Üniversitesi Arap Öğrenci Birliği"
+            class="union-logo">
+        <h1 data-ar="اتحاد الطلاب لجامعة اسنيورت" data-tr="Esenyurt Üniversitesi Arap Öğrenci Birliği">Esenyurt
+            Üniversitesi Arap Öğrenci Birliği</h1>
+        <p data-ar="Esenyurt Üniversitesi Arap Öğrenci Birliği" data-tr="Esenyurt Üniversitesi Arap Öğrenci Birliği">
+            Esenyurt Üniversitesi Arap Öğrenci Birliği</p>
+    </header>
+
+    <!-- SEO Introduction Paragraph -->
+    <section class="seo-intro"
+        style="max-width:900px;margin:0 auto;padding:10px 20px;text-align:center;font-size:0.95rem;color:#888;line-height:1.8;">
+        <p data-ar="مرحباً بكم في الموقع الرسمي لاتحاد الطلاب لجامعة اسنيورت (Esenyurt Üniversitesi Arap Öğrenci Birliği). نُقدّم للطلاب العرب في جامعة إسطنبول إسنيورت ملخصات دراسية، كتب PDF مجانية، أخبار الجامعة، إعلانات مهمة، ودعم أكاديمي شامل لمساعدتكم في مسيرتكم الجامعية."
+            data-tr="Esenyurt Üniversitesi Arap Öğrenci Birliği resmi web sitesine hoş geldiniz. İstanbul Esenyurt Üniversitesi'ndeki Arap öğrencilere ders özetleri, ücretsiz PDF kitaplar, üniversite haberleri, önemli duyurular ve kapsamlı akademik destek sunuyoruz.">
+            Esenyurt Üniversitesi Arap Öğrenci Birliği resmi web sitesine hoş geldiniz. İstanbul Esenyurt
+            Üniversitesi'ndeki Arap öğrencilere ders özetleri, ücretsiz PDF kitaplar, üniversite haberleri, önemli
+            duyurular ve kapsamlı akademik destek sunuyoruz.
+        </p>
+    </section>
+
+    <nav class="navigation">
+        <div class="nav-container">
+            <button class="nav-btn active" onclick="showSection('about')" data-ar="📋 عن الاتحاد"
+                data-tr="📋 Hakkımızda">📋 Hakkımızda</button>
+            <button class="nav-btn" onclick="showSection('news')" data-ar="📰 الأخبار" data-tr="📰 Haberler">📰
+                Haberler</button>
+            <button class="nav-btn" onclick="showSection('library')" data-ar="📚 المكتبة" data-tr="📚 Kütüphane">📚
+                Kütüphane</button>
+            <button class="nav-btn" onclick="showSection('community')" data-ar="👥 مجتمع الطلاب"
+                data-tr="👥 Öğrenci Topluluğu">👥 Öğrenci Topluluğu</button>
+            <button class="nav-btn" onclick="showSection('events')" data-ar="🎉 الفعاليات" data-tr="🎉 Etkinlikler">🎉
+                Etkinlikler</button>
+            <button class="nav-btn" onclick="showSection('contact')" data-ar="💬 تواصل معنا" data-tr="💬 İletişim">💬
+                İletişim</button>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="toggle-btn">
+                    <span id="icon">🌙</span>
+                </button>
+                <div class="language-switcher">
+                    <button class="lang-btn" data-lang="ar" title="العربية">AR</button>
+                    <button class="lang-btn" data-lang="tr" title="Türkçe">TR</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section id="about" class="section active">
+            <h2 class="section-title" data-ar="📋 عن الاتحاد" data-tr="📋 Hakkımızda">📋 عن الاتحاد</h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="🎯 رسالتنا" data-tr="🎯 Misyonumuz">🎯 رسالتنا</h3>
+                <div class="subsection-content">
+                    <p data-ar="توفير بيئة داعمة وشاملة للطلاب العرب في جامعة إسنيورت، والعمل كجسر للتواصل الثقافي والاجتماعي والأكاديمي بين الطلاب والإدارة."
+                        data-tr="Esenyurt Üniversitesi'ndeki Arap öğrenciler için destekleyici ve kapsayıcı bir ortam sağlamak ve öğrenciler ile yönetim arasında kültürel, sosyal ve akademik iletişim için bir köprü görevi görmek.">
+                        توفير بيئة داعمة وشاملة للطلاب العرب في جامعة إسنيورت، والعمل كجسر للتواصل الثقافي والاجتماعي
+                        والأكاديمي بين الطلاب والإدارة.</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="🌟 رؤيتنا" data-tr="🌟 Vizyonumuz">🌟 رؤيتنا</h3>
+                <div class="subsection-content">
+                    <p data-ar="أن نكون الكيان الطلابي الرائد في دعم وخدمة الطلاب العرب، والمساهمة الفعالة في إثراء الحياة الجامعية وتنمية مهارات الأعضاء."
+                        data-tr="Arap öğrencileri destekleme ve hizmet etmede önde gelen öğrenci kuruluşu olmak ve üniversite yaşamını zenginleştirme ve üyelerin becerilerini geliştirmede aktif rol almak.">
+                        أن نكون الكيان الطلابي الرائد في دعم وخدمة الطلاب العرب، والمساهمة الفعالة في إثراء الحياة
+                        الجامعية وتنمية مهارات الأعضاء.</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title"><i class="fas fa-trophy"></i> <span data-ar="أهدافنا"
+                        data-tr="Hedeflerimiz">أهدافنا</span></h3>
+                <div class="subsection-content">
+                    <ul>
+                        <li><i class="fas fa-angle-left"></i> <span
+                                data-ar="تمثيل مصالح الطلاب العرب أمام إدارة الجامعة"
+                                data-tr="Arap öğrencilerin çıkarlarını üniversite yönetimi önünde temsil etmek">تمثيل
+                                مصالح الطلاب العرب أمام إدارة الجامعة</span></li>
+                        <li><i class="fas fa-angle-left"></i> <span
+                                data-ar="تنظيم الأنشطة الثقافية والاجتماعية والأكاديمية"
+                                data-tr="Kültürel, sosyal ve akademik etkinlikler düzenlemek">تنظيم الأنشطة الثقافية
+                                والاجتماعية والأكاديمية</span></li>
+                        <li><i class="fas fa-angle-left"></i> <span data-ar="تقديم الدعم الأكاديمي والاستشارات للطلاب"
+                                data-tr="Öğrencilere akademik destek ve danışmanlık sağlamak">تقديم الدعم الأكاديمي
+                                والاستشارات للطلاب</span></li>
+                        <li><i class="fas fa-angle-left"></i> <span data-ar="بناء شبكة تواصل قوية بين الطلاب العرب"
+                                data-tr="Arap öğrenciler arasında güçlü bir iletişim ağı kurmak">بناء شبكة تواصل قوية
+                                بين الطلاب العرب</span></li>
+                        <li><i class="fas fa-angle-left"></i> <span
+                                data-ar="تعزيز التبادل الثقافي والتعاون مع المؤسسات الأخرى"
+                                data-tr="Diğer kurumlarla kültürel değişim ve işbirliğini teşvik etmek">تعزيز التبادل
+                                الثقافي والتعاون مع المؤسسات الأخرى</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection leadership-section">
+                <h3 class="subsection-title"><i class="fas fa-sitemap"></i> <span data-ar="الهيكل التنظيمي"
+                        data-tr="Organizasyon Yapısı">الهيكل التنظيمي</span></h3>
+                <div id="leadershipGrid" class="leadership-grid">
+                    <!-- Member cards will be populated dynamically by JavaScript -->
+                </div>
+            </div>
+
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="🤝 الشركاء" data-tr="🤝 Ortaklarımız">🤝 الشركاء</h3>
+                <div class="subsection-content">
+                    <p data-ar="سيتم إضافة قائمة بالشركاء والجهات الداعمة قريباً..."
+                        data-tr="Ortaklar ve destekleyen kuruluşların listesi yakında eklenecek...">سيتم إضافة قائمة
+                        بالشركاء والجهات الداعمة قريباً...</p>
+                    <div class="info-box">
+                        <p><strong data-ar="💡 ملاحظة:" data-tr="💡 Not:">💡 ملاحظة:</strong> <span
+                                data-ar="نحن نسعى دائماً لبناء شراكات استراتيجية مع مؤسسات وجهات تخدم مصلحة الطلاب العرب."
+                                data-tr="Arap öğrencilerin çıkarlarına hizmet eden kurum ve kuruluşlarla stratejik ortaklıklar kurmaya her zaman çalışıyoruz.">نحن
+                                نسعى دائماً لبناء شراكات استراتيجية مع مؤسسات وجهات تخدم مصلحة الطلاب العرب.</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About subsection for Amin removed -->
+        </section>
+
+        <section id="news" class="section">
+            <h2 class="section-title" data-ar="📰 الأخبار" data-tr="📰 Haberler">📰 الأخبار</h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="📢 آخر الأخبار" data-tr="📢 Son Haberler">📢 آخر الأخبار</h3>
+                <div class="subsection-content">
+                    <p data-ar="تابع أحدث الأخبار والتحديثات من اتحاد الطلبة العرب في جامعة إسنيورت"
+                        data-tr="Esenyurt Üniversitesi Arap Öğrenciler Birliği'nin en son haberlerini ve güncellemelerini takip edin">
+                        تابع أحدث الأخبار والتحديثات من اتحاد الطلبة العرب في جامعة إسنيورت</p>
+
+                    <!-- News Vertical List Container -->
+                    <div class="news-list-container" id="newsSection">
+                        <!-- News Card 1 - لقائنا الثالث -->
+                        <div class="news-card-vertical" data-title="لقائنا الثالث - معًا... حيث يكون الأثر"
+                            data-title-tr="Üçüncü Buluşmamız - Birlikte... İz Bıraktığımız Yerde"
+                            data-date="16 فبراير 2026" data-date-tr="16 Şubat 2026" data-img="news1.jpg"
+                            data-content="لقائنا الثالث تحت شعار: معًا... حيث يكون الأثر. بيتٌ واحد... لهدفٍ واحد. لسنا مجرد طلاب في جامعة واحدة، بل إخوة يجمعنا هدف واحد وطموح مشترك. بالتعاون نصنع الفرق، وبالوحدة نصل إلى ما هو أبعد. الموعد: الإثنين 16/02/2026 الساعة 12:00 - المكان: الطابق الثالث."
+                            data-content-tr="Üçüncü buluşmamız 'Birlikte... İz Bıraktığımız Yerde' sloganıyla gerçekleşiyor. Tek bir ev... Tek bir hedef için. Biz sadece aynı üniversitedeki öğrenciler değiliz, ortak hedef ve tutkuyla birleşen kardeşleriz. İşbirliğiyle fark yaratırız, birlikle daha ileri gideriz. Tarih: Pazartesi 16/02/2026 Saat: 12:00 - Yer: 3. Kat.">
+                            <div class="news-card-image">
+                                <img src="news1.jpg" alt="لقائنا الثالث">
+                                <div class="news-card-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span data-ar="16 فبراير 2026" data-tr="16 Şubat 2026">16 فبراير 2026</span>
+                                </div>
+                            </div>
+                            <div class="news-card-content">
+                                <h4 class="news-card-title" data-ar="لقائنا الثالث - معًا... حيث يكون الأثر"
+                                    data-tr="Üçüncü Buluşmamız - Birlikte... İz Bıraktığımız Yerde">لقائنا الثالث -
+                                    معًا... حيث يكون الأثر</h4>
+                                <p class="news-card-excerpt"
+                                    data-ar="بيتٌ واحد... لهدفٍ واحد. لسنا مجرد طلاب في جامعة واحدة، بل إخوة يجمعنا هدف واحد وطموح مشترك. بالتعاون نصنع الفرق، وبالوحدة نصل إلى ما هو أبعد."
+                                    data-tr="Tek bir ev... Tek bir hedef için. Biz sadece aynı üniversitedeki öğrenciler değiliz, ortak hedef ve tutkuyla birleşen kardeşleriz. İşbirliğiyle fark yaratırız, birlikle daha ileri gideriz.">
+                                    بيتٌ واحد... لهدفٍ واحد. لسنا مجرد طلاب في جامعة واحدة، بل إخوة يجمعنا هدف واحد
+                                    وطموح مشترك. بالتعاون نصنع الفرق، وبالوحدة نصل إلى ما هو أبعد.</p>
+                                <button class="btn-primary news-read-more" onclick="openNewsModalFromCard(this)">
+                                    <i class="fas fa-book-open"></i>
+                                    <span data-ar="اقرأ المزيد" data-tr="Devamını Oku">اقرأ المزيد</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- News Card 2 - بيان اعتماد النادي -->
+                        <div class="news-card-vertical" data-title="بيان - اعتماد الاتحاد كنادٍ طلابي رسمي"
+                            data-title-tr="Bildiri - Birliğin Resmi Öğrenci Kulübü Olarak Tescili"
+                            data-date="12 فبراير 2026" data-date-tr="12 Şubat 2026" data-img="news2.jpg"
+                            data-content="بحمد الله وتوفيقه، يُعلن اتحاد الطلاب العرب بجامعة إسنيورت اعتماده رسميًا كنادٍ طلابي (Club) معترف به من قِبل إدارة الجامعة. ويُعد هذا الاعتماد خطوةً مهمة في مسيرة الاتحاد، وانتقالًا إلى مرحلةٍ أكثر تنظيمًا ومسؤولية وتأثيرًا داخل الحرم الجامعي. ونؤكد التزامنا بتقديم نموذج طلابي راقٍ، يقوم على وضوح الرؤية، والعمل الجماعي، وسرعة التنفيذ، بما يخدم طلابنا ويعزز حضورهم ومشاركتهم الفاعلة. فالنجاح لا يُصنع فرديًا، بل يُبنى بتكاتف الجهود."
+                            data-content-tr="Allah'a hamd olsun, Esenyurt Üniversitesi Arap Öğrenciler Birliği, üniversite yönetimi tarafından resmi olarak tanınan bir Öğrenci Kulübü (Club) olarak tescil edildiğini duyurur. Bu tescil, birliğin yolculuğunda önemli bir adımdır ve kampüs içinde daha organize, sorumlu ve etkili bir aşamaya geçişi temsil etmektedir. Net vizyon, takım çalışması ve hızlı uygulama üzerine kurulu seçkin bir öğrenci modeli sunma taahhüdümüzü yeniliyoruz. Başarı bireysel değil, ortak çabayla inşa edilir.">
+                            <div class="news-card-image">
+                                <img src="news2.jpg" alt="بيان اعتماد النادي">
+                                <div class="news-card-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span data-ar="12 فبراير 2026" data-tr="12 Şubat 2026">12 فبراير 2026</span>
+                                </div>
+                            </div>
+                            <div class="news-card-content">
+                                <h4 class="news-card-title" data-ar="بيان - اعتماد الاتحاد كنادٍ طلابي رسمي"
+                                    data-tr="Bildiri - Birliğin Resmi Öğrenci Kulübü Olarak Tescili">بيان - اعتماد
+                                    الاتحاد كنادٍ طلابي رسمي</h4>
+                                <p class="news-card-excerpt"
+                                    data-ar="يُعلن اتحاد الطلاب العرب بجامعة إسنيورت اعتماده رسميًا كنادٍ طلابي (Club) معترف به من قِبل إدارة الجامعة. خطوة مهمة نحو مزيد من التنظيم والتأثير."
+                                    data-tr="Esenyurt Üniversitesi Arap Öğrenciler Birliği, üniversite yönetimi tarafından resmi olarak tanınan bir Öğrenci Kulübü olarak tescil edildiğini duyurur. Daha fazla organizasyon ve etki için önemli bir adım.">
+                                    يُعلن اتحاد الطلاب العرب بجامعة إسنيورت اعتماده رسميًا كنادٍ طلابي (Club) معترف به
+                                    من قِبل إدارة الجامعة. خطوة مهمة نحو مزيد من التنظيم والتأثير.</p>
+                                <button class="btn-primary news-read-more" onclick="openNewsModalFromCard(this)">
+                                    <i class="fas fa-book-open"></i>
+                                    <span data-ar="اقرأ المزيد" data-tr="Devamını Oku">اقرأ المزيد</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- News Card 3 - دورة الإسعافات الأولية -->
+                        <div class="news-card-vertical" data-title="دورة الإسعافات الأولية - مجاناً"
+                            data-title-tr="İlk Yardım Kursu - Ücretsiz" data-date="10 فبراير 2026"
+                            data-date-tr="10 Şubat 2026" data-img="news3.jpg"
+                            data-content="ينظم اتحاد الطلاب العرب بجامعة إسنيورت بالتعاون مع مؤسسة رايس للتنمية والتمكين الدولية دورة مجانية في الإسعافات الأولية مع الدكتور بلال سنهوب. الموعد: يوم الثلاثاء الموافق 10/02/2026. المكان: اسنيورت - مهتار ششمه. للتواصل: +90 538 645 43 19."
+                            data-content-tr="Esenyurt Üniversitesi Arap Öğrenciler Birliği, Rise Uluslararası Kalkınma ve Güçlendirme Vakfı işbirliğiyle Dr. Bilal Senhub ile ücretsiz İlk Yardım Kursu düzenliyor. Tarih: Salı 10/02/2026. Yer: Esenyurt - Mehterçeşme. İletişim: +90 538 645 43 19.">
+                            <div class="news-card-image">
+                                <img src="news3.jpg" alt="دورة الإسعافات الأولية">
+                                <div class="news-card-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span data-ar="10 فبراير 2026" data-tr="10 Şubat 2026">10 فبراير 2026</span>
+                                </div>
+                            </div>
+                            <div class="news-card-content">
+                                <h4 class="news-card-title" data-ar="دورة الإسعافات الأولية - مجاناً"
+                                    data-tr="İlk Yardım Kursu - Ücretsiz">دورة الإسعافات الأولية - مجاناً</h4>
+                                <p class="news-card-excerpt"
+                                    data-ar="دورة مجانية في الإسعافات الأولية مع الدكتور بلال سنهوب بالتعاون مع مؤسسة رايس للتنمية والتمكين الدولية. يوم الثلاثاء 10/02/2026."
+                                    data-tr="Rise Uluslararası Kalkınma ve Güçlendirme Vakfı işbirliğiyle Dr. Bilal Senhub ile ücretsiz İlk Yardım Kursu. Salı 10/02/2026.">
+                                    دورة مجانية في الإسعافات الأولية مع الدكتور بلال سنهوب بالتعاون مع مؤسسة رايس
+                                    للتنمية والتمكين الدولية. يوم الثلاثاء 10/02/2026.</p>
+                                <button class="btn-primary news-read-more" onclick="openNewsModalFromCard(this)">
+                                    <i class="fas fa-book-open"></i>
+                                    <span data-ar="اقرأ المزيد" data-tr="Devamını Oku">اقرأ المزيد</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- News Card 4 - رحلة تزلج (Hidden by default) -->
+                        <div class="news-card-vertical hidden" data-title="ودّعنا الفاينلز.. واستقبلنا الثلج!"
+                            data-title-tr="Finalleri Uğurladık.. Karı Karşıladık!" data-date="31 يناير 2026"
+                            data-date-tr="31 Ocak 2026" data-img="news4.jpg"
+                            data-content="ودّعنا الفاينلز.. واستقبلنا الثلج! رحلة ترفيهية شملت التزلج والأكل في Kalamis Buzzfest. الموعد: السبت 31/01/2026 الساعة 12:00. تضمنت الرحلة أنشطة التزلج على الجليد والاستمتاع بوجبات متنوعة ومشروبات ساخنة في أجواء شتوية رائعة."
+                            data-content-tr="Finalleri uğurladık.. Karı karşıladık! Kalamis Buzzfest'te buz pateni ve yemek içeren eğlenceli bir gezi. Tarih: Cumartesi 31/01/2026 Saat: 12:00. Gezi, buz pateni aktiviteleri ve harika kış atmosferinde çeşitli yemekler ve sıcak içeceklerin tadını çıkarmayı içeriyordu.">
+                            <div class="news-card-image">
+                                <img src="news4.jpg" alt="رحلة تزلج">
+                                <div class="news-card-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span data-ar="31 يناير 2026" data-tr="31 Ocak 2026">31 يناير 2026</span>
+                                </div>
+                            </div>
+                            <div class="news-card-content">
+                                <h4 class="news-card-title" data-ar="ودّعنا الفاينلز.. واستقبلنا الثلج!"
+                                    data-tr="Finalleri Uğurladık.. Karı Karşıladık!">ودّعنا الفاينلز.. واستقبلنا الثلج!
+                                </h4>
+                                <p class="news-card-excerpt"
+                                    data-ar="رحلة ترفيهية شملت التزلج والأكل في Kalamis Buzzfest. أجواء شتوية رائعة مع التزلج على الجليد ووجبات متنوعة ومشروبات ساخنة."
+                                    data-tr="Kalamis Buzzfest'te buz pateni ve yemek içeren eğlenceli bir gezi. Harika kış atmosferinde buz pateni, çeşitli yemekler ve sıcak içecekler.">
+                                    رحلة ترفيهية شملت التزلج والأكل في Kalamis Buzzfest. أجواء شتوية رائعة مع التزلج على
+                                    الجليد ووجبات متنوعة ومشروبات ساخنة.</p>
+                                <button class="btn-primary news-read-more" onclick="openNewsModalFromCard(this)">
+                                    <i class="fas fa-book-open"></i>
+                                    <span data-ar="اقرأ المزيد" data-tr="Devamını Oku">اقرأ المزيد</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- News Card 5 - بيان استقالة الرئيس (Hidden by default) -->
+                        <div class="news-card-vertical hidden" data-title="بيان - قبول استقالة رئيس الاتحاد"
+                            data-title-tr="Bildiri - Birlik Başkanının İstifasının Kabulü" data-date="16 يناير 2026"
+                            data-date-tr="16 Ocak 2026" data-img="news5.jpg"
+                            data-content="بسم الله الرحمن الرحيم. يُعلن الاتحاد العربي بجامعة إسنيورت عن قبول استقالة رئيس الاتحاد، المقدمة بتاريخ يوم الجمعة الموافق 16/01/2026، وذلك بعد فترة من العطاء والعمل الذي قدّمه خلال توليه المسؤولية. ويؤكد الاتحاد أن نائب رئيس الاتحاد سيتولى تسيير أعمال الاتحاد خلال المرحلة القادمة. كما يشدد الاتحاد على أن الاتحاد فكرة ورسالة، لا تُبنى على أشخاص، بل تستمر بسواعد أبنائها وإيمانهم بأهدافها."
+                            data-content-tr="Rahman ve Rahim olan Allah'ın adıyla. Esenyurt Üniversitesi Arap Birliği, Cuma 16/01/2026 tarihinde sunulan Birlik Başkanının istifasının kabulünü duyurur. Başkan, görev süresince büyük bir özveri ve çalışma sergilemiştir. Birlik, Başkan Yardımcısının önümüzdeki dönemde birliğin işlerini yürüteceğini teyit eder. Birlik, bir fikir ve misyondur; kişilere değil, üyelerinin çabalarına ve hedeflerine olan inançlarına dayanır.">
+                            <div class="news-card-image">
+                                <img src="news5.jpg" alt="بيان استقالة الرئيس">
+                                <div class="news-card-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span data-ar="16 يناير 2026" data-tr="16 Ocak 2026">16 يناير 2026</span>
+                                </div>
+                            </div>
+                            <div class="news-card-content">
+                                <h4 class="news-card-title" data-ar="بيان - قبول استقالة رئيس الاتحاد"
+                                    data-tr="Bildiri - Birlik Başkanının İstifasının Kabulü">بيان - قبول استقالة رئيس
+                                    الاتحاد</h4>
+                                <p class="news-card-excerpt"
+                                    data-ar="يُعلن الاتحاد العربي بجامعة إسنيورت عن قبول استقالة رئيس الاتحاد. نائب الرئيس سيتولى تسيير الأعمال خلال المرحلة القادمة."
+                                    data-tr="Esenyurt Üniversitesi Arap Birliği, Birlik Başkanının istifasının kabulünü duyurur. Başkan Yardımcısı önümüzdeki dönemde işleri yürütecektir.">
+                                    يُعلن الاتحاد العربي بجامعة إسنيورت عن قبول استقالة رئيس الاتحاد. نائب الرئيس سيتولى
+                                    تسيير الأعمال خلال المرحلة القادمة.</p>
+                                <button class="btn-primary news-read-more" onclick="openNewsModalFromCard(this)">
+                                    <i class="fas fa-book-open"></i>
+                                    <span data-ar="اقرأ المزيد" data-tr="Devamını Oku">اقرأ المزيد</span>
+                                </button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- Show More / Hide Button -->
+                    <div class="news-toggle-container">
+                        <button id="toggle-news-btn" class="btn-primary news-toggle-btn"
+                            onclick="toggleNewsVisibility()">
+                            <i class="fas fa-chevron-down"></i>
+                            <span data-ar="عرض المزيد" data-tr="Daha Fazla Göster">عرض المزيد</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="📋 إعلانات هامة" data-tr="📋 Önemli Duyurular">📋 إعلانات هامة
+                </h3>
+                <div class="subsection-content">
+                    <div class="info-box">
+                        <p><strong data-ar="📅 اجتماع شهري:" data-tr="📅 Aylık Toplantı:">📅 اجتماع شهري:</strong> <span
+                                data-ar="سيتم عقد الاجتماع الشهري للاتحاد"
+                                data-tr="Birlik için aylık toplantı önümüzdeki yapılacak">سيتم عقد
+                                الاجتماع الشهري للاتحاد يوم الأربعاء المقبل</span></p>
+                        <p><strong data-ar="🎯 فرص تطوع:" data-tr="🎯 Gönüllülük Fırsatları:">🎯 فرص تطوع:</strong>
+                            <span data-ar="متاحة فرص تطوع جديدة في مشاريع الاتحاد"
+                                data-tr="Birlik projelerinde yeni gönüllülük fırsatları mevcut">متاحة فرص تطوع جديدة في
+                                مشاريع الاتحاد</span>
+                        </p>
+                        <p><strong data-ar="📚 دورات تدريبية:" data-tr="📚 Eğitim Kursları:">📚 دورات تدريبية:</strong>
+                            <span data-ar="سيتم الإعلان قريباً عن دورات تدريبية جديدة"
+                                data-tr="Yeni eğitim kursları yakında duyurulacak">سيتم الإعلان قريباً عن دورات تدريبية
+                                جديدة</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="🔔 اشتراك في النشرات الإخبارية"
+                    data-tr="🔔 Haber Bültenine Abone Ol">🔔 اشتراك في النشرات الإخبارية</h3>
+                <div class="subsection-content">
+                    <p data-ar="اشترك في نشراتنا الإخبارية للحصول على آخر الأخبار والتحديثات مباشرة في بريدك الإلكتروني"
+                        data-tr="En son haberleri ve güncellemeleri doğrudan e-posta adresinize almak için haber bültenimize abone olun">
+                        اشترك في نشراتنا الإخبارية للحصول على آخر الأخبار والتحديثات مباشرة في بريدك الإلكتروني</p>
+
+                    <div class="comment-form-container">
+                        <form id="newsletterForm">
+                            <div class="form-group">
+                                <label for="newsletterEmail" data-ar="البريد الإلكتروني:" data-tr="E-posta:">البريد
+                                    الإلكتروني:</label>
+                                <input type="email" id="newsletterEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newsletterName" data-ar="الاسم (اختياري):"
+                                    data-tr="Ad (İsteğe Bağlı):">الاسم (اختياري):</label>
+                                <input type="text" id="newsletterName">
+                            </div>
+                            <button type="submit" class="btn-primary" data-ar="📧 اشتراك" data-tr="📧 Abone Ol">📧
+                                اشتراك</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="library" class="section">
+            <h2 class="section-title" data-ar="📚 المكتبة الطلابية" data-tr="📚 Öğrenci Kütüphanesi">📚 المكتبة الطلابية
+            </h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="📚 الكتب والمراجع" data-tr="📚 Kitaplar ve Kaynaklar">📚 الكتب
+                    والمراجع</h3>
+                <div class="grid-container">
+                    <div class="card">
+                        <div class="card-title" data-ar="📘 كتب المناهج الدراسية" data-tr="📘 Ders Kitapları">📘 كتب
+                            المناهج الدراسية</div>
+                        <div class="card-content" data-ar="مجموعة من الكتب المعتمدة للمناهج الدراسية في مختلف التخصصات"
+                            data-tr="Farklı bölümlerdeki ders programları için onaylanmış kitaplar koleksiyonu">مجموعة
+                            من الكتب المعتمدة للمناهج الدراسية في مختلف التخصصات</div>
+                        <button class="btn-primary" data-ar="تصفح الكتب" data-tr="Kitapları Görüntüle">تصفح
+                            الكتب</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-title" data-ar="📗 ملخصات الطلاب" data-tr="📗 Öğrenci Özetleri">📗 ملخصات
+                            الطلاب
+                        </div>
+                        <div class="card-content" data-ar="ملخصات دراسية أعدها الطلاب لمساعدة زملائهم"
+                            data-tr="Öğrenciler tarafından akranlarına yardımcı olmak için hazırlanan çalışma özetleri">
+                            ملخصات
+                            دراسية أعدها الطلاب لمساعدة زملائهم</div>
+                        <button class="btn-primary" data-ar="استعرض الملخصات" data-tr="Özetleri Görüntüle">استعرض
+                            الملخصات</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="🤖 أدوات الذكاء الاصطناعي" data-tr="🤖 Yapay Zeka Araçları">🤖
+                    أدوات الذكاء الاصطناعي</h3>
+                <div class="grid-container">
+                    <div class="card">
+                        <div class="card-title">ChatGPT</div>
+                        <div class="card-content" data-ar="مساعد ذكي للإجابة على الأسئلة وحل المشكلات الأكاديمية"
+                            data-tr="Soruları yanıtlamak ve akademik sorunları çözmek için akıllı asistan">مساعد ذكي
+                            للإجابة على الأسئلة وحل المشكلات الأكاديمية</div>
+                        <a href="https://chat.openai.com" target="_blank" class="btn-primary" data-ar="فتح الأداة"
+                            data-tr="Aracı Aç">فتح الأداة</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Google Gemini</div>
+                        <div class="card-content" data-ar="أداة ذكاء اصطناعي من Google للبحث والتحليل"
+                            data-tr="Google'dan araştırma ve analiz için yapay zeka aracı">أداة ذكاء اصطناعي من Google
+                            للبحث والتحليل</div>
+                        <a href="https://gemini.google.com" target="_blank" class="btn-primary" data-ar="فتح الأداة"
+                            data-tr="Aracı Aç">فتح الأداة</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Grammarly</div>
+                        <div class="card-content" data-ar="مساعد الكتابة لتحسين اللغة الإنجليزية"
+                            data-tr="İngilizceyi geliştirmek için yazma asistanı">مساعد الكتابة لتحسين اللغة الإنجليزية
+                        </div>
+                        <a href="https://www.grammarly.com" target="_blank" class="btn-primary" data-ar="فتح الأداة"
+                            data-tr="Aracı Aç">فتح الأداة</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Quillbot</div>
+                        <div class="card-content" data-ar="أداة إعادة الصياغة وتحسين الكتابة الأكاديمية"
+                            data-tr="Akademik yazıyı yeniden ifade etme ve iyileştirme aracı">أداة إعادة الصياغة وتحسين
+                            الكتابة الأكاديمية</div>
+                        <a href="https://quillbot.com" target="_blank" class="btn-primary" data-ar="فتح الأداة"
+                            data-tr="Aracı Aç">فتح الأداة</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="🌐 مواقع تعليمية مفيدة" data-tr="🌐 Faydalı Eğitim Siteleri">🌐
+                    مواقع تعليمية مفيدة</h3>
+                <div class="grid-container">
+                    <div class="card">
+                        <div class="card-title">Coursera</div>
+                        <div class="card-content" data-ar="دورات أكاديمية من جامعات عالمية"
+                            data-tr="Dünya üniversitelerinden akademik kurslar">دورات أكاديمية من جامعات عالمية</div>
+                        <a href="https://www.coursera.org" target="_blank" class="btn-primary" data-ar="زيارة الموقع"
+                            data-tr="Siteyi Ziyaret Et">زيارة الموقع</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">FreeCodeCamp</div>
+                        <div class="card-content" data-ar="منصة تعليمية مجانية لتعلم البرمجة والتطوير"
+                            data-tr="Ücretsiz kodlama ve geliştirme öğrenme platformu">منصة تعليمية مجانية لتعلم البرمجة
+                            والتطوير</div>
+                        <a href="https://www.freecodecamp.org" target="_blank" class="btn-primary"
+                            data-ar="زيارة الموقع" data-tr="Siteyi Ziyaret Et">زيارة الموقع</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">edX</div>
+                        <div class="card-content" data-ar="دورات جامعية معتمدة من MIT وHarvard"
+                            data-tr="MIT ve Harvard'dan onaylı üniversite kursları">دورات جامعية معتمدة من MIT وHarvard
+                        </div>
+                        <a href="https://www.edx.org" target="_blank" class="btn-primary" data-ar="زيارة الموقع"
+                            data-tr="Siteyi Ziyaret Et">زيارة الموقع</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Açık Ders</div>
+                        <div class="card-content" data-ar="منصة تعليمية تركية مفتوحة للدروس"
+                            data-tr="Açık dersler için Türkçe eğitim platformu">منصة تعليمية تركية مفتوحة للدروس</div>
+                        <a href="https://acikders.ankara.edu.tr" target="_blank" class="btn-primary"
+                            data-ar="زيارة الموقع" data-tr="Siteyi Ziyaret Et">زيارة الموقع</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Derspresso</div>
+                        <div class="card-content" data-ar="منصة تعليمية تركية للدروس والمحاضرات"
+                            data-tr="Türkçe dersler ve ders materyalleri için eğitim platformu">منصة تعليمية تركية
+                            للدروس والمحاضرات</div>
+                        <a href="https://derspresso.com" target="_blank" class="btn-primary" data-ar="زيارة الموقع"
+                            data-tr="Siteyi Ziyaret Et">زيارة الموقع</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="📖 المحاضرات والملفات" data-tr="📖 Dersler ve Dosyalar">📖
+                    المحاضرات والملفات</h3>
+                <div class="subsection-content">
+                    <p data-ar="مكتبة شاملة من المحاضرات والملفات الدراسية. اختر المرحلة، القسم، التخصص، السنة، والفصل للوصول إلى الملفات."
+                        data-tr="Kapsamlı ders materyalleri kütüphanesi. Dosyalara ulaşmak için seviye, bölüm, alan, yıl ve dönemi seçin.">
+                        مكتبة شاملة من المحاضرات والملفات الدراسية. اختر المرحلة، القسم، التخصص، السنة، والفصل للوصول
+                        إلى الملفات.</p>
+
+                    <!-- Breadcrumb -->
+                    <div id="breadcrumb" class="acad-breadcrumb"></div>
+                    <small id="acadVersion" style="color:#888;font-size:0.7rem;display:block;margin-top:2px;"></small>
+
+                    <!-- 5-Level Dependent Dropdowns -->
+                    <div class="acad-dropdowns-grid">
+                        <!-- 1. Degree Level -->
+                        <div class="acad-dropdown-wrap" id="wrap-degree">
+                            <label class="acad-label"><span class="acad-step">1</span> <span data-ar="المرحلة الدراسية"
+                                    data-tr="Eğitim Seviyesi">المرحلة الدراسية</span></label>
+                            <select id="degreeSelect" disabled>
+                                <option value="" disabled selected data-ar="المرحلة الدراسية..."
+                                    data-tr="Eğitim Seviyesi...">المرحلة الدراسية...</option>
+                            </select>
+                        </div>
+                        <!-- 2. Department -->
+                        <div class="acad-dropdown-wrap" id="wrap-dept">
+                            <label class="acad-label"><span class="acad-step">2</span> <span data-ar="القسم"
+                                    data-tr="Bölüm">القسم</span></label>
+                            <select id="departmentSelect" disabled>
+                                <option value="" disabled selected data-ar="القسم..." data-tr="Bölüm...">القسم...
+                                </option>
+                            </select>
+                        </div>
+                        <!-- 3. Major -->
+                        <div class="acad-dropdown-wrap" id="wrap-major">
+                            <label class="acad-label"><span class="acad-step">3</span> <span data-ar="التخصص"
+                                    data-tr="Alan">التخصص</span></label>
+                            <select id="majorSelect" disabled>
+                                <option value="" disabled selected data-ar="التخصص..." data-tr="Alan...">التخصص...
+                                </option>
+                            </select>
+                        </div>
+                        <!-- 4. Year -->
+                        <div class="acad-dropdown-wrap" id="wrap-year">
+                            <label class="acad-label"><span class="acad-step">4</span> <span data-ar="السنة"
+                                    data-tr="Yıl">السنة</span></label>
+                            <select id="yearSelect" disabled>
+                                <option value="" disabled selected data-ar="السنة..." data-tr="Yıl...">السنة...</option>
+                            </select>
+                        </div>
+                        <!-- 5. Semester -->
+                        <div class="acad-dropdown-wrap" id="wrap-semester">
+                            <label class="acad-label"><span class="acad-step">5</span> <span data-ar="الفصل"
+                                    data-tr="Dönem">الفصل</span></label>
+                            <select id="semesterSelect" disabled>
+                                <option value="" disabled selected data-ar="الفصل..." data-tr="Dönem...">الفصل...
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="acad-actions">
+                        <button id="searchBtn" class="btn-primary">🔍 <span data-ar="عرض الملفات"
+                                data-tr="Dosyaları Göster">عرض الملفات</span></button>
+                        <button id="resetBtn" class="btn-primary"
+                            style="background: linear-gradient(145deg, #6b7280, #4b5563);">🔄 <span
+                                data-ar="إعادة تعيين" data-tr="Sıfırla">إعادة تعيين</span></button>
+                    </div>
+
+                    <!-- Toast Container -->
+                    <div id="toastContainer" class="acad-toast-container"></div>
+
+                    <!-- Results Section -->
+                    <div id="resultsArea" class="acad-results">
+                        <div class="acad-results-header">
+                            <h4 id="resultsTitle" data-ar="📂 النتائج" data-tr="📂 Sonuçlar">📂 النتائج</h4>
+                            <span id="resultsCount" class="acad-results-count">0 ملف</span>
+                        </div>
+                        <!-- Loading -->
+                        <div id="loadingIndicator" class="acad-loading">
+                            <div class="acad-spinner"></div>
+                            <span data-ar="جاري البحث عن الملفات..." data-tr="Dosyalar aranıyor...">جاري البحث عن
+                                الملفات...</span>
+                        </div>
+                        <!-- Empty -->
+                        <div id="emptyState" class="acad-empty">
+                            <span class="acad-empty-icon">📭</span>
+                            <span data-ar="لا توجد ملفات متاحة لهذا الاختيار"
+                                data-tr="Bu seçim için dosya bulunamadı">لا توجد ملفات متاحة لهذا الاختيار</span>
+                        </div>
+                        <!-- Results Grid -->
+                        <div id="resultsGrid" class="acad-results-grid"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="community" class="section">
+            <h2 class="section-title" data-ar="👥 مجتمع الطلاب" data-tr="👥 Öğrenci Topluluğu">👥 مجتمع الطلاب</h2>
+
+            <!-- Student Guide Section -->
+            <div class="subsection student-guide-section">
+                <h3 class="subsection-title" data-ar="📚 دليل الطالب" data-tr="📚 Öğrenci Rehberi">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span data-ar="دليل الطالب" data-tr="Öğrenci Rehberi">دليل الطالب</span>
+                </h3>
+                <p class="guide-description" data-ar="معلومات أساسية تساعدك في حياتك الجامعية والمعيشية"
+                    data-tr="Üniversite ve yaşam hayatınızda size yardımcı olacak temel bilgiler">
+                    معلومات أساسية تساعدك في حياتك الجامعية والمعيشية
+                </p>
+
+                <div class="student-guide-grid">
+                    <!-- Student Accommodation Card -->
+                    <a href="https://docs.google.com/spreadsheets/d/143Ero8YGIyb3ZM7p9rzYBrLa2jWvkAGD/edit?usp=drive_link&amp;ouid=113747498321073357698&amp;rtpof=true&amp;sd=true"
+                        target="_blank" class="guide-card-link">
+                        <div class="guide-card">
+                            <span class="guide-card-badge">📄</span>
+                            <div class="guide-card-icon">
+                                🏠
+                            </div>
+                            <h4 class="guide-card-title" data-ar="السكن الطلابي" data-tr="Öğrenci Konaklama">السكن
+                                الطلابي</h4>
+                            <p class="guide-card-desc" data-ar="معلومات شاملة عن خيارات السكن المتاحة للطلاب"
+                                data-tr="Öğrenciler için mevcut konaklama seçenekleri hakkında kapsamlı bilgiler">
+                                معلومات شاملة عن خيارات السكن المتاحة للطلاب
+                            </p>
+                            <span class="guide-card-arrow">⬇️</span>
+                        </div>
+                    </a>
+
+                    <!-- Student Housing in Istanbul Card -->
+                    <a href="https://drive.google.com/file/d/1_9FLgcp0mp0Gdi2aiOd6cS63SM2b9reU/view?usp=drive_link"
+                        target="_blank" class="guide-card-link">
+                        <div class="guide-card">
+                            <span class="guide-card-badge">📄</span>
+                            <div class="guide-card-icon">
+                                🏙️
+                            </div>
+                            <h4 class="guide-card-title" data-ar="السكن في إسطنبول" data-tr="İstanbul'da Konut">السكن في
+                                إسطنبول</h4>
+                            <p class="guide-card-desc" data-ar="دليل شامل للسكن والإيجار في مدينة إسطنبول"
+                                data-tr="İstanbul'da konut ve kiralama için kapsamlı rehber">
+                                دليل شامل للسكن والإيجار في مدينة إسطنبول
+                            </p>
+                            <span class="guide-card-arrow">⬇️</span>
+                        </div>
+                    </a>
+
+                    <!-- How to Choose Courses Card -->
+                    <a href="https://drive.google.com/file/d/1Np3Elo1raekaVeKgodODEVkNsPyltAla/view?usp=drive_link"
+                        target="_blank" class="guide-card-link">
+                        <div class="guide-card">
+                            <span class="guide-card-badge">📄</span>
+                            <div class="guide-card-icon">
+                                📝
+                            </div>
+                            <h4 class="guide-card-title" data-ar="كيفية اختيار المواد"
+                                data-tr="Ders Seçimi Nasıl Yapılır">
+                                كيفية اختيار المواد</h4>
+                            <p class="guide-card-desc" data-ar="إرشادات لاختيار المواد الدراسية المناسبة لك"
+                                data-tr="Size uygun dersleri seçmek için rehberlik">
+                                إرشادات لاختيار المواد الدراسية المناسبة لك
+                            </p>
+                            <span class="guide-card-arrow">⬇️</span>
+                        </div>
+                    </a>
+
+                    <!-- University Information Card -->
+                    <a href="https://drive.google.com/file/d/1wR5k2jS-X_mKWuIrEM6jnvqq1Xd9Wr5F/view?usp=drive_link"
+                        target="_blank" class="guide-card-link">
+                        <div class="guide-card">
+                            <span class="guide-card-badge">📄</span>
+                            <div class="guide-card-icon">
+                                🎓
+                            </div>
+                            <h4 class="guide-card-title" data-ar="معلومات الجامعة" data-tr="Üniversite Bilgileri">
+                                معلومات
+                                الجامعة</h4>
+                            <p class="guide-card-desc" data-ar="كل ما تحتاج معرفته عن جامعة إسنيورت"
+                                data-tr="Esenyurt Üniversitesi hakkında bilmeniz gereken her şey">
+                                كل ما تحتاج معرفته عن جامعة إسنيورت
+                            </p>
+                            <span class="guide-card-arrow">⬇️</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Ad Banner -->
+                <div class="ad-banner">
+                    <div class="ad-banner-content">
+                        <div class="ad-banner-icon">📢</div>
+                        <div class="ad-banner-text">
+                            <h4 class="ad-banner-title" data-ar="أعلن هنا" data-tr="Reklamınızı Buraya Verin">أعلن هنا
+                            </h4>
+                            <p class="ad-banner-desc" data-ar="هل تريد الوصول إلى مجتمع الطلاب؟ ضع إعلانك هنا!"
+                                data-tr="Öğrenci topluluğuna ulaşmak ister misiniz? Reklamınızı buraya yerleştirin!">هل
+                                تريد الوصول إلى مجتمع الطلاب؟ ضع إعلانك هنا!</p>
+                        </div>
+                        <a href="https://wa.me/905510676147" target="_blank" class="ad-banner-btn" data-ar="تواصل معنا"
+                            data-tr="Bize Ulaşın">تواصل معنا</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="🌟 قصص النجاح" data-tr="🌟 Başarı Hikayeleri">🌟 قصص النجاح</h3>
+                <div class="subsection-content">
+                    <p data-ar="نفخر بمشاركة قصص نجاح طلابنا وإنجازاتهم الأكاديمية والمهنية"
+                        data-tr="Öğrencilerimizin başarı hikayelerini ve akademik ve mesleki başarılarını paylaşmaktan gurur duyuyoruz">
+                        نفخر بمشاركة قصص نجاح طلابنا وإنجازاتهم الأكاديمية والمهنية</p>
+
+                    <div class="info-box">
+                        <p data-ar="لا توجد قصص نجاح حالياً. ترقبوا قصص طلابنا الملهمة قريباً!"
+                            data-tr="Şu anda başarı hikayesi bulunmamaktadır. İlham verici öğrenci hikayelerimizi yakında takip edin!">
+                            لا توجد قصص نجاح حالياً. ترقبوا قصص طلابنا الملهمة قريباً!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="💭 تجارب الطلاب" data-tr="💭 Öğrenci Deneyimleri">💭 تجارب الطلاب
+                </h3>
+                <div class="subsection-content">
+                    <p data-ar="شارك تجربتك الجامعية وساعد الطلاب الجدد"
+                        data-tr="Üniversite deneyiminizi paylaşın ve yeni öğrencilere yardımcı olun">شارك تجربتك
+                        الجامعية وساعد الطلاب الجدد</p>
+
+                    <div class="comment-form-container">
+                        <form id="experienceForm">
+                            <div class="form-group">
+                                <label for="studentName" data-ar="الاسم:" data-tr="Ad:">الاسم:</label>
+                                <input type="text" id="studentName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentMajor" data-ar="التخصص:" data-tr="Bölüm:">التخصص:</label>
+                                <input type="text" id="studentMajor" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentYear" data-ar="السنة الدراسية:" data-tr="Sınıf:">السنة
+                                    الدراسية:</label>
+                                <select id="studentYear" required>
+                                    <option value="" data-ar="اختر السنة" data-tr="Sınıf Seçin">اختر السنة</option>
+                                    <option value="1" data-ar="السنة الأولى" data-tr="1. Sınıf">السنة الأولى</option>
+                                    <option value="2" data-ar="السنة الثانية" data-tr="2. Sınıf">السنة الثانية</option>
+                                    <option value="3" data-ar="السنة الثالثة" data-tr="3. Sınıf">السنة الثالثة</option>
+                                    <option value="4" data-ar="السنة الرابعة" data-tr="4. Sınıf">السنة الرابعة</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentExperience" data-ar="شارك تجربتك:"
+                                    data-tr="Deneyiminizi Paylaşın:">شارك تجربتك:</label>
+                                <textarea id="studentExperience" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" data-ar="📤 إرسال التجربة"
+                                data-tr="📤 Deneyimi Gönder">📤 إرسال التجربة</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="💡 المبادرات الطلابية" data-tr="💡 Öğrenci Girişimleri">💡
+                    المبادرات الطلابية</h3>
+                <div class="subsection-content">
+                    <p data-ar="مبادرات طلابية نفخر بها ونشجع على تطويرها"
+                        data-tr="Gurur duyduğumuz ve geliştirmeyi teşvik ettiğimiz öğrenci girişimleri">مبادرات طلابية
+                        نفخر بها ونشجع على تطويرها</p>
+                    <ul>
+                        <li><span data-ar="مبادرة الدعم الأكاديمي: جلسات دراسية جماعية للطلاب"
+                                data-tr="Akademik Destek Girişimi: Öğrenciler için grup çalışma oturumları">مبادرة الدعم
+                                الأكاديمي: جلسات دراسية جماعية للطلاب</span></li>
+                        <li><span data-ar="مبادرة التوجيه المهني: ورش عمل لتطوير المهارات"
+                                data-tr="Mesleki Rehberlik Girişimi: Beceri geliştirme atölyeleri">مبادرة التوجيه
+                                المهني: ورش عمل لتطوير المهارات</span></li>
+                        <li><span data-ar="مبادرة الأنشطة الثقافية: فعاليات ثقافية وفنية"
+                                data-tr="Kültürel Etkinlikler Girişimi: Kültürel ve sanatsal etkinlikler">مبادرة الأنشطة
+                                الثقافية: فعاليات ثقافية وفنية</span></li>
+                        <li><span data-ar="مبادرة التطوع: فرص تطوعية محلية ودولية"
+                                data-tr="Gönüllülük Girişimi: Yerel ve uluslararası gönüllülük fırsatları">مبادرة
+                                التطوع: فرص تطوعية محلية ودولية</span></li>
+                    </ul>
+                    <button class="btn-primary" data-ar="📝 اقترح مبادرة جديدة" data-tr="📝 Yeni Girişim Öner">📝 اقترح
+                        مبادرة جديدة</button>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="🗣️ لقاءات النقاش" data-tr="🗣️ Tartışma Toplantıları">🗣️ لقاءات
+                    النقاش</h3>
+                <div class="subsection-content">
+                    <p data-ar="لقاءات دورية لمناقشة القضايا الطلابية والأكاديمية"
+                        data-tr="Öğrenci ve akademik konuları tartışmak için düzenli toplantılar">لقاءات دورية لمناقشة
+                        القضايا الطلابية والأكاديمية</p>
+
+                    <div class="info-box">
+                        <p><strong data-ar="📅 اللقاء القادم:" data-tr="📅 Sonraki Toplantı:">📅 اللقاء القادم:</strong>
+                            [<span data-ar="تاريخ اللقاء" data-tr="Toplantı Tarihi">تاريخ اللقاء</span>]</p>
+                        <p><strong data-ar="🕐 الوقت:" data-tr="🕐 Saat:">🕐 الوقت:</strong> [<span data-ar="وقت اللقاء"
+                                data-tr="Toplantı Saati">وقت اللقاء</span>]</p>
+                        <p><strong data-ar="📍 المكان:" data-tr="📍 Yer:">📍 المكان:</strong> [<span
+                                data-ar="مكان اللقاء" data-tr="Toplantı Yeri">مكان اللقاء</span>]</p>
+                        <p><strong data-ar="📋 الموضوع:" data-tr="📋 Konu:">📋 الموضوع:</strong> [<span
+                                data-ar="موضوع النقاش" data-tr="Tartışma Konusu">موضوع النقاش</span>]</p>
+                    </div>
+                    <button class="btn-primary" data-ar="✅ سجل حضورك" data-tr="✅ Katılımınızı Kaydedin">✅ سجل
+                        حضورك</button>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="💬 شارك أفكارك" data-tr="💬 Fikirlerinizi Paylaşın">💬 شارك أفكارك
+                </h3>
+                <div class="subsection-content">
+                    <p data-ar="لديك فكرة؟ مقترح؟ شاركنا رأيك لتحسين الخدمات الطلابية"
+                        data-tr="Bir fikriniz mi var? Öneriniz mi var? Öğrenci hizmetlerini iyileştirmek için görüşlerinizi paylaşın">
+                        لديك فكرة؟ مقترح؟ شاركنا رأيك لتحسين الخدمات الطلابية</p>
+
+                    <div class="comment-form-container">
+                        <form id="ideaForm">
+                            <div class="form-group">
+                                <label for="ideaName" data-ar="الاسم (اختياري):" data-tr="Ad (İsteğe Bağlı):">الاسم
+                                    (اختياري):</label>
+                                <input type="text" id="ideaName">
+                            </div>
+                            <div class="form-group">
+                                <label for="ideaCategory" data-ar="نوع المقترح:" data-tr="Öneri Türü:">نوع
+                                    المقترح:</label>
+                                <select id="ideaCategory" required>
+                                    <option value="" data-ar="اختر الفئة" data-tr="Kategori Seçin">اختر الفئة</option>
+                                    <option value="academic" data-ar="أكاديمي" data-tr="Akademik">أكاديمي</option>
+                                    <option value="social" data-ar="اجتماعي" data-tr="Sosyal">اجتماعي</option>
+                                    <option value="facility" data-ar="الخدمات والمرافق" data-tr="Hizmetler ve Tesisler">
+                                        الخدمات والمرافق</option>
+                                    <option value="activity" data-ar="الأنشطة" data-tr="Etkinlikler">الأنشطة</option>
+                                    <option value="other" data-ar="أخرى" data-tr="Diğer">أخرى</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="ideaContent" data-ar="اكتب فكرتك أو مقترحك:"
+                                    data-tr="Fikrinizi veya Önerinizi Yazın:">اكتب فكرتك أو مقترحك:</label>
+                                <textarea id="ideaContent" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" data-ar="📤 إرسال المقترح"
+                                data-tr="📤 Öneriyi Gönder">📤 إرسال المقترح</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="section">
+            <h2 class="section-title" data-ar="🎉 الفعاليات" data-tr="🎉 Etkinlikler">🎉 الفعاليات</h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="📅 تقويم الفعاليات" data-tr="📅 Etkinlik Takvimi">📅 تقويم
+                    الفعاليات</h3>
+                <div class="subsection-content">
+                    <p data-ar="جدول الفعاليات والأنشطة القادمة للفصل الدراسي"
+                        data-tr="Dönem için yaklaşan etkinlikler ve aktivitelerin programı">جدول الفعاليات والأنشطة
+                        القادمة للفصل الدراسي</p>
+
+                    <div class="timeline">
+                        <!-- No upcoming events scheduled -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="✍️ التسجيل في التطوع" data-tr="✍️ Gönüllülük Kaydı">✍️ التسجيل في
+                    التطوع</h3>
+                <div class="subsection-content">
+                    <p data-ar="انضم إلى فريق التطوع وكن جزءاً من التغيير الإيجابي"
+                        data-tr="Gönüllü ekibe katılın ve olumlu değişimin bir parçası olun">انضم إلى فريق التطوع وكن
+                        جزءاً من التغيير الإيجابي</p>
+
+                    <div class="comment-form-container">
+                        <form id="volunteerForm">
+                            <div class="form-group">
+                                <label for="volName" data-ar="الاسم الكامل:" data-tr="Tam Ad:">الاسم الكامل:</label>
+                                <input type="text" id="volName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="volEmail" data-ar="البريد الإلكتروني:" data-tr="E-posta:">البريد
+                                    الإلكتروني:</label>
+                                <input type="email" id="volEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="volPhone" data-ar="رقم الهاتف:" data-tr="Telefon Numarası:">رقم
+                                    الهاتف:</label>
+                                <input type="tel" id="volPhone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="volMajor" data-ar="التخصص:" data-tr="Bölüm:">التخصص:</label>
+                                <input type="text" id="volMajor" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="volInterest" data-ar="المجال المفضل للتطوع:"
+                                    data-tr="Tercih Edilen Gönüllülük Alanı:">المجال المفضل للتطوع:</label>
+                                <select id="volInterest" required>
+                                    <option value="" data-ar="اختر المجال" data-tr="Alan Seçin">اختر المجال</option>
+                                    <option value="education" data-ar="التعليم والتدريس" data-tr="Eğitim ve Öğretim">
+                                        التعليم والتدريس</option>
+                                    <option value="social" data-ar="العمل الاجتماعي" data-tr="Sosyal Hizmet">العمل
+                                        الاجتماعي</option>
+                                    <option value="environment" data-ar="البيئة" data-tr="Çevre">البيئة</option>
+                                    <option value="health" data-ar="الصحة" data-tr="Sağlık">الصحة</option>
+                                    <option value="culture" data-ar="الثقافة والفنون" data-tr="Kültür ve Sanat">الثقافة
+                                        والفنون</option>
+                                    <option value="other" data-ar="أخرى" data-tr="Diğer">أخرى</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="volExperience" data-ar="خبرتك في التطوع (إن وجدت):"
+                                    data-tr="Gönüllülük Deneyiminiz (Varsa):">خبرتك في التطوع (إن وجدت):</label>
+                                <textarea id="volExperience" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" data-ar="📝 سجل كمتطوع"
+                                data-tr="📝 Gönüllü Olarak Kaydol">📝 سجل كمتطوع</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="📸 تقارير وصور الفعاليات السابقة"
+                    data-tr="📸 Geçmiş Etkinlik Raporları ve Fotoğrafları">📸 تقارير وصور الفعاليات السابقة</h3>
+                <div class="subsection-content">
+                    <p data-ar="استعرض أبرز الفعاليات التي نظمها الاتحاد"
+                        data-tr="Birliğin düzenlediği öne çıkan etkinlikleri görüntüleyin">استعرض أبرز الفعاليات التي
+                        نظمها الاتحاد</p>
+
+                    <div class="grid-container">
+                        <div class="card">
+                            <div class="card-title" data-ar="ديسمبر يتنفس وطنا" data-tr="Aralık Vatanı Solur">ديسمبر
+                                يتنفس وطنا</div>
+                            <div class="card-content"
+                                data-ar="فعالية ديسمبر يتنفس وطنا ومناقشة الإنجازات التاريخية<br><br>📅 ديسمبر 2025/12/26 | 👥 152 مشارك"
+                                data-tr="Aralık Vatanı Solur etkinliği ve tarihi başarıları tartışmak için<br><br>📅 Aralık 2025/12/26 | 👥 152 Katılımcı">
+                                فعالية ديسمبر يتنفس وطنا ومناقشة الإنجازات التاريخية<br><br>📅 ديسمبر 2025/12/26 | 👥
+                                152 مشارك</div>
+                            <div class="image-gallery">
+                                <div class="gallery-container" id="decGallery">
+                                    <img src="dec1.jpg" alt="ديسمبر يتنفس وطنا 1" class="gallery-image active"
+                                        onclick="openLightbox(this.src)">
+                                    <img src="dic2.jpg" alt="ديسمبر يتنفس وطنا 3" class="gallery-image"
+                                        onclick="openLightbox(this.src)">
+                                    <img src="dec3.jpg" alt="ديسمبر يتنفس وطنا 4" class="gallery-image"
+                                        onclick="openLightbox(this.src)">
+                                    <img src="dec4.jpg" alt="ديسمبر يتنفس وطنا 5" class="gallery-image"
+                                        onclick="openLightbox(this.src)">
+                                    <img src="dec5.jpg" alt="ديسمبر يتنفس وطنا 6" class="gallery-image"
+                                        onclick="openLightbox(this.src)">
+                                    <img src="dec6.jpg" alt="ديسمبر يتنفس وطنا 7" class="gallery-image"
+                                        onclick="openLightbox(this.src)">
+                                    <img src="dic7.jpg" alt="ديسمبر يتنفس وطنا 8" class="gallery-image"
+                                        onclick="openLightbox(this.src)">
+                                    <img src="dic8.jpg" alt="ديسمبر يتنفس وطنا 9" class="gallery-image"
+                                        onclick="openLightbox(this.src)">
+                                    <img src="dic9.jpg" alt="ديسمبر يتنفس وطنا 10" class="gallery-image"
+                                        onclick="openLightbox(this.src)">
+                                    <img src="dic10.jpg" alt="ديسمبر يتنفس وطنا 11" class="gallery-image"
+                                        onclick="openLightbox(this.src)">
+                                    <img src="dic12.jpg" alt="ديسمبر يتنفس وطنا 12" class="gallery-image"
+                                        onclick="openLightbox(this.src)">
+                                </div>
+                                <button class="gallery-arrow gallery-prev" onclick="changeImage(-1)">‹</button>
+                                <button class="gallery-arrow gallery-next" onclick="changeImage(1)">›</button>
+                            </div>
+                            <button class="btn-primary" data-ar="شاهد التقرير" data-tr="Raporu Görüntüle">شاهد
+                                التقرير</button>
+                        </div>
+                        <div class="card">
+                            <div class="card-title" data-ar="رحلة فاصل و نواصل" data-tr="Fasıla Yolculuğu ve Devam">رحلة
+                                فاصل و نواصل</div>
+                            <div class="card-content"
+                                data-ar="رحلة ترفيهية وثقافية للطلاب العرب<br><br>📅 يناير 2025/01/15 | 👥 40 مشارك"
+                                data-tr="Arap öğrencileri için eğlenceli ve kültürel yolculuk<br><br>📅 Ocak 2025/01/15 | 👥 40 Katılımcı">
+                                رحلة ترفيهية وثقافية للطلاب العرب<br><br>📅 يناير 2025/01/15 | 👥 40 مشارك</div>
+                            <div class="image-gallery">
+                                <div class="gallery-container">
+                                    <img src="رحلة فاصل و نواصل.jpeg" alt="صورة من رحلة فاصل و نواصل 1"
+                                        class="gallery-image active" onclick="openLightbox(this.src)">
+                                    <img src="رحلة فاصل و نواصل (2).jpeg" alt="صورة من رحلة فاصل و نواصل 2"
+                                        class="gallery-image" onclick="openLightbox(this.src)">
+                                    <img src="رحلة فاصل و نواصل3.jpeg" alt="صورة من رحلة فاصل و نواصل 3"
+                                        class="gallery-image" onclick="openLightbox(this.src)">
+                                </div>
+                                <button class="gallery-arrow gallery-prev" onclick="changeImage(-1)">‹</button>
+                                <button class="gallery-arrow gallery-next" onclick="changeImage(1)">›</button>
+                            </div>
+                            <button class="btn-primary" data-ar="شاهد التقرير" data-tr="Raporu Görüntüle">شاهد
+                                التقرير</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title" data-ar="💬 تواصل معنا" data-tr="💬 İletişim">💬 تواصل معنا</h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="📧 أرسل رسالة" data-tr="📧 Mesaj Gönder">📧 أرسل رسالة</h3>
+                <div class="subsection-content">
+                    <div class="comment-form-container">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="contactName" data-ar="الاسم:" data-tr="Ad:">الاسم:</label>
+                                <input type="text" id="contactName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail" data-ar="البريد الإلكتروني:" data-tr="E-posta:">البريد
+                                    الإلكتروني:</label>
+                                <input type="email" id="contactEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject" data-ar="الموضوع:" data-tr="Konu:">الموضوع:</label>
+                                <select id="contactSubject" required>
+                                    <option value="" data-ar="اختر الموضوع" data-tr="Konu Seçin">اختر الموضوع</option>
+                                    <option value="inquiry" data-ar="استفسار عام" data-tr="Genel Soru">استفسار عام
+                                    </option>
+                                    <option value="complaint" data-ar="شكوى" data-tr="Şikayet">شكوى</option>
+                                    <option value="suggestion" data-ar="اقتراح" data-tr="Öneri">اقتراح</option>
+                                    <option value="membership" data-ar="الانضمام للاتحاد" data-tr="Birliğe Katılım">
+                                        الانضمام للاتحاد</option>
+                                    <option value="other" data-ar="أخرى" data-tr="Diğer">أخرى</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage" data-ar="الرسالة:" data-tr="Mesaj:">الرسالة:</label>
+                                <textarea id="contactMessage" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" data-ar="📤 إرسال الرسالة"
+                                data-tr="📤 Mesajı Gönder">📤 إرسال الرسالة</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="📞 معلومات الاتصال" data-tr="📞 İletişim Bilgileri">📞 معلومات
+                    الاتصال</h3>
+                <div class="subsection-content">
+                    <div class="info-box">
+                        <p><strong data-ar="📧 البريد الإلكتروني:" data-tr="📧 E-posta:">📧 البريد الإلكتروني:</strong>
+                            aob.iesu2@gmail.com</p>
+                        <p><strong data-ar="📱 الهاتف:" data-tr="📱 Telefon:">📱 الهاتف:</strong> <span dir="ltr">+90
+                                5066014076</span></p>
+                        <p><strong data-ar="📍 العنوان:" data-tr="📍 Adres:">📍 العنوان:</strong> <span
+                                data-ar="جامعة إسنيورت - مبنى الطلاب - الطابق الثاني"
+                                data-tr="Esenyurt Üniversitesi - Öğrenci Binası - 2. Kat">جامعة إسنيورت - مبنى الطلاب -
+                                الطابق الثاني</span></p>
+                        <p><strong data-ar="🕐 ساعات العمل:" data-tr="🕐 Çalışma Saatleri:">🕐 ساعات العمل:</strong>
+                            <span data-ar="الإثنين - الجمعة: 9:00 صباحاً - 5:00 مساءً"
+                                data-tr="Pazartesi - Cuma: 09:00 - 17:00">الإثنين - الجمعة: 9:00 صباحاً - 5:00
+                                مساءً</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title" data-ar="🌐 تابعنا على وسائل التواصل"
+                    data-tr="🌐 Sosyal Medyada Bizi Takip Edin">🌐 تابعنا على وسائل التواصل</h3>
+                <div class="subsection-content">
+                    <div class="grid-container">
+                        <p data-ar="تابعنا على قنواتنا الرسمية للتحديثات السريعة والأرشيف:"
+                            data-tr="Hızlı güncellemeler ve arşiv için resmi kanallarımızı takip edin:">تابعنا على
+                            قنواتنا الرسمية للتحديثات السريعة والأرشيف:</p>
+                        <div class="social-links">
+                            <div class="social-buttons">
+                                <a href="https://whatsapp.com/channel/0029Vb6qeL0AO7RJgyshio1G" target="_blank"
+                                    rel="noopener" aria-label="قناة واتساب" class="social-btn">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-ar="واتساب"
+                                        data-tr="WhatsApp">واتساب</span>
+                                </a>
+
+                                <a href="https://www.instagram.com/aob.iesu?igsh=MXNpZHY4ZXZkYng2MA==" target="_blank"
+                                    rel="noopener" aria-label="إنستغرام" class="social-btn">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i> <span data-ar="إنستغرام"
+                                        data-tr="Instagram">إنستغرام</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p data-ar="للتواصل والاستفسار: +905510676147" data-tr="İletişim ve Sorular İçin: +905510676147">İletişim ve
+            Sorular İçin:
+            +905510676147</p>
+        <p>&copy; 2026 <span data-ar="اتحاد الطلبة العرب - جامعة إسنيورت. جميع الحقوق محفوظة."
+                data-tr="Arap Öğrenci Birliği - Esenyurt Üniversitesi. Tüm hakları saklıdır.">Arap Öğrenci Birliği -
+                Esenyurt Üniversitesi. Tüm hakları saklıdır.</span></p>
+    </footer>
+
+    <div id="memberModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeMemberModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modal-photo" src="" alt="صورة العضو" class="modal-photo">
+                <h2 id="modal-name"></h2>
+                <p id="modal-role" class="modal-role"></p>
+                <p id="modal-dept" class="modal-dept"></p>
+                <div class="modal-details">
+                    <h3 data-ar="نبذة عن العضو" data-tr="Üye Hakkında">نبذة عن العضو</h3>
+                    <p id="modal-bio"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="newsModal" class="news-modal-overlay">
+        <div class="news-modal-box" onclick="event.stopPropagation()">
+            <!-- Close Button -->
+            <button class="news-modal-close" id="newsModalCloseBtn" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Modal Content -->
+            <div class="news-modal-content">
+                <!-- Large Image -->
+                <div class="news-modal-image-container">
+                    <img id="news-modal-image" src="" alt="صورة الخبر">
+                </div>
+
+                <!-- News Details -->
+                <div class="news-modal-details">
+                    <h2 id="news-modal-title" class="news-modal-title"></h2>
+                    <div class="news-modal-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span id="news-modal-date-text"></span>
+                    </div>
+                    <div class="news-modal-body">
+                        <p id="news-modal-content"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- API Helper -->
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Modal Fix - Runs LAST to prevent conflicts -->
+    <script>
+        (function () {
+            // Elements
+            var newsModal = document.getElementById('newsModal');
+            var closeBtn = document.getElementById('newsModalCloseBtn');
+            var modalBox = document.querySelector('.news-modal-box');
+
+            if (!newsModal) return;
+
+            // Ensure modal hidden on load
+            newsModal.style.display = 'none';
+            newsModal.classList.remove('active');
+
+            // Global open function
+            window.openNewsModalFromCard = function (btn) {
+                var card = btn.closest('.news-card-vertical');
+                if (!card || !newsModal) return;
+
+                // Get data - check language for Turkish support
+                var currentLang = localStorage.getItem('language') || 'tr';
+                var title, date, content;
+                if (currentLang === 'tr') {
+                    title = card.getAttribute('data-title-tr') || card.getAttribute('data-title') || '';
+                    date = card.getAttribute('data-date-tr') || card.getAttribute('data-date') || '';
+                    content = card.getAttribute('data-content-tr') || card.getAttribute('data-content') || '';
+                } else {
+                    title = card.getAttribute('data-title') || '';
+                    date = card.getAttribute('data-date') || '';
+                    content = card.getAttribute('data-content') || '';
+                }
+                var img = card.getAttribute('data-img') || '';
+
+                // Set content
+                var titleEl = document.getElementById('news-modal-title');
+                var dateEl = document.getElementById('news-modal-date-text');
+                var contentEl = document.getElementById('news-modal-content');
+                var imgEl = document.getElementById('news-modal-image');
+
+                if (titleEl) titleEl.textContent = title;
+                if (dateEl) dateEl.textContent = date;
+                if (contentEl) contentEl.textContent = content;
+                if (imgEl) {
+                    imgEl.src = img;
+                    imgEl.style.display = img ? 'block' : 'none';
+                }
+
+                // Show
+                newsModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                setTimeout(function () {
+                    newsModal.classList.add('active');
+                }, 10);
+            };
+
+            // Global close function
+            window.closeNewsModal = function () {
+                if (!newsModal) return;
+                newsModal.classList.remove('active');
+                newsModal.style.display = 'none';
+                document.body.style.overflow = '';
+            };
+
+            // Close button
+            if (closeBtn) {
+                closeBtn.onclick = function (e) {
+                    e.stopPropagation();
+                    window.closeNewsModal();
+                };
+            }
+
+            // Click on overlay closes
+            newsModal.onclick = function (e) {
+                if (e.target === newsModal) {
+                    window.closeNewsModal();
+                }
+            };
+
+            // Stop propagation on modal box
+            if (modalBox) {
+                modalBox.onclick = function (e) {
+                    e.stopPropagation();
+                };
+            }
+
+            // ESC key - use addEventListener to not override other handlers
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && newsModal.style.display === 'flex') {
+                    window.closeNewsModal();
+                }
+            }, false);
+        })();
+    </script>
+
+    <!-- Welcome Popup Script -->
+    <script>
+        (function () {
+            var welcomePopup = document.getElementById('welcomePopup');
+
+            if (!welcomePopup) return;
+
+            // Check if popup was already shown this session
+            if (sessionStorage.getItem('welcomePopupShown')) {
+                welcomePopup.classList.add('hidden');
+                welcomePopup.style.display = 'none';
+                return;
+            }
+
+            // Show popup
+            welcomePopup.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+            // Close function
+            window.closeWelcomePopup = function () {
+                welcomePopup.classList.add('hidden');
+                document.body.style.overflow = '';
+                sessionStorage.setItem('welcomePopupShown', 'true');
+
+                // Remove from DOM after animation
+                setTimeout(function () {
+                    welcomePopup.style.display = 'none';
+                }, 400);
+            };
+
+            // Click on overlay to close
+            welcomePopup.addEventListener('click', function (e) {
+                if (e.target === welcomePopup) {
+                    closeWelcomePopup();
+                }
+            });
+
+            // ESC key to close
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && !welcomePopup.classList.contains('hidden')) {
+                    closeWelcomePopup();
+                }
+            });
+
+            // Stop propagation on popup box
+            var popupBox = welcomePopup.querySelector('.welcome-popup-box');
+            if (popupBox) {
+                popupBox.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            }
+        })();
+    </script>
+
+    <!-- Photo Lightbox Modal -->
+    <div id="photoLightbox" class="photo-lightbox-overlay" onclick="closeLightbox(event)">
+        <button class="lightbox-close-btn" onclick="closeLightbox(event, true)">&times;</button>
+        <img id="lightboxImage" class="lightbox-image" src="" alt="صورة مكبرة">
+    </div>
+
+    <script>
+        // Photo Lightbox Functions
+        function openLightbox(src) {
+            var overlay = document.getElementById('photoLightbox');
+            var img = document.getElementById('lightboxImage');
+            img.src = src;
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(e, forceClose) {
+            if (forceClose || e.target === document.getElementById('photoLightbox')) {
+                var overlay = document.getElementById('photoLightbox');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                var overlay = document.getElementById('photoLightbox');
+                if (overlay.classList.contains('active')) {
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    </script>
+
+    <!-- Academic Search System -->
+    <!-- INLINE REDIRECT BLOCKER: prevents any auto-redirect from cached JS -->
+    <script>
+        (function () {
+            // Save the real window.open
+            var _realOpen = window.open;
+            var _buttonClicked = false;
+
+            // The View Files button sets this flag on click
+            var searchBtn = document.getElementById('searchBtn');
+            if (searchBtn) {
+                searchBtn.addEventListener('click', function () {
+                    _buttonClicked = true;
+                    // Allow window.open for a short window after button click
+                    setTimeout(function () { _buttonClicked = false; }, 500);
+                }, true); // capture phase — runs FIRST
+            }
+
+            // Override window.open — only allow it during button click
+            window.open = function (url, target, features) {
+                if (_buttonClicked) {
+                    console.log('[REDIRECT BLOCKER] ✅ Allowed — button was clicked');
+                    return _realOpen.call(window, url, target, features);
+                } else {
+                    console.log('[REDIRECT BLOCKER] 🚫 BLOCKED auto-redirect to:', url);
+                    // Store the URL so the button can use it
+                    window.__blockedUrl = url;
+                    return null;
+                }
+            };
+
+            // Also block location changes from the academic section
+            console.log('[REDIRECT BLOCKER] Active — only View Files button can open links');
+        })();
+    </script>
+    <script src="academic-data.js?t=v3"></script>
+    <script src="academic-search.js?t=v3"></script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://chat.whatsapp.com/Faca5R61s6SB07FZCp8ywB" target="_blank" rel="noopener" class="wa-float"
+        id="waFloat" aria-label="Chat with us on WhatsApp">
+        <span class="wa-tooltip" data-ar="تواصل معنا عبر واتساب" data-tr="WhatsApp ile iletişime geçin">WhatsApp ile
+            iletişime geçin</span>
+        <span class="wa-pulse"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white"
+            style="position:relative;z-index:2;">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+</body>
+
+</html>

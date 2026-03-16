@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akademik Arama | Esenyurt Üniversitesi</title>
+    <meta name="description"
+        content="Akademik Arama Sistemi - Seviye, bölüm ve alana göre ders materyallerini ve dosyaları arayın">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="academic-search.css?t=v3">
+</head>
+
+<body>
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="header-inner">
+            <a href="index.html" class="header-brand">
+                <img src="union_logo.png" alt="Birlik Logosu" class="header-logo">
+                <div>
+                    <div class="header-title">Akademik Arama</div>
+                    <div class="header-subtitle">Esenyurt Üniversitesi</div>
+                </div>
+            </a>
+            <div class="header-actions">
+                <button id="themeToggle" class="icon-btn" title="Temayı Değiştir">
+                    <span class="theme-icon">☀️</span>
+                </button>
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Ana Sayfa</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Hero -->
+        <section class="hero-section">
+            <span class="hero-icon">🎓</span>
+            <h1 class="hero-title">Akademik Arama Sistemi</h1>
+            <p class="hero-description">
+                Ders materyallerini ve dosyaları kolayca bulun. İstediğiniz materyallere ulaşmak için eğitim seviyesi,
+                bölüm, alan, yıl ve dönemi seçin.
+            </p>
+        </section>
+
+        <!-- Breadcrumb -->
+        <div id="breadcrumb" class="breadcrumb-bar"></div>
+
+        <!-- Dropdown Section -->
+        <section class="dropdown-section">
+            <h2 class="dropdown-section-title">
+                <span class="title-icon">🔎</span>
+                <span>Arama Kriterlerini Seçin</span>
+            </h2>
+
+            <div class="dropdowns-grid">
+                <!-- 1. Degree Level -->
+                <div class="dropdown-wrapper">
+                    <label class="dropdown-label">
+                        <span class="label-step">1</span>
+                        Eğitim Seviyesi
+                    </label>
+                    <div class="custom-select-wrap">
+                        <select id="degreeSelect" disabled>
+                            <option value="" disabled selected>Eğitim Seviyesi...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 2. Department -->
+                <div class="dropdown-wrapper">
+                    <label class="dropdown-label">
+                        <span class="label-step">2</span>
+                        Bölüm
+                    </label>
+                    <div class="custom-select-wrap">
+                        <select id="departmentSelect" disabled>
+                            <option value="" disabled selected>Bölüm...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 3. Major -->
+                <div class="dropdown-wrapper">
+                    <label class="dropdown-label">
+                        <span class="label-step">3</span>
+                        Alan
+                    </label>
+                    <div class="custom-select-wrap">
+                        <select id="majorSelect" disabled>
+                            <option value="" disabled selected>Alan...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 4. Year -->
+                <div class="dropdown-wrapper">
+                    <label class="dropdown-label">
+                        <span class="label-step">4</span>
+                        Yıl
+                    </label>
+                    <div class="custom-select-wrap">
+                        <select id="yearSelect" disabled>
+                            <option value="" disabled selected>Yıl...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 5. Semester -->
+                <div class="dropdown-wrapper">
+                    <label class="dropdown-label">
+                        <span class="label-step">5</span>
+                        Dönem
+                    </label>
+                    <div class="custom-select-wrap">
+                        <select id="semesterSelect" disabled>
+                            <option value="" disabled selected>Dönem...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-row">
+                <button id="searchBtn" class="btn btn-primary">
+                    <i class="fas fa-search"></i>
+                    <span>🔍 Dosyaları Göster</span>
+                </button>
+                <button id="resetBtn" class="btn btn-secondary">
+                    <i class="fas fa-redo-alt"></i>
+                    <span>Sıfırla</span>
+                </button>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <p>© 2026 Arap Öğrenci Birliği - Esenyurt Üniversitesi | <a href="index.html">Ana Sayfaya Dön</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- INLINE REDIRECT BLOCKER -->
+    <script>
+        (function () {
+            var _realOpen = window.open;
+            var _buttonClicked = false;
+            var searchBtn = document.getElementById('searchBtn');
+            if (searchBtn) {
+                searchBtn.addEventListener('click', function () {
+                    _buttonClicked = true;
+                    setTimeout(function () { _buttonClicked = false; }, 500);
+                }, true);
+            }
+            window.open = function (url, target, features) {
+                if (_buttonClicked) {
+                    return _realOpen.call(window, url, target, features);
+                } else {
+                    console.log('[BLOCKER] Blocked auto-redirect to:', url);
+                    window.__blockedUrl = url;
+                    return null;
+                }
+            };
+        })();
+    </script>
+    <script src="academic-data.js?t=v3"></script>
+    <script src="academic-search.js?t=v3"></script>
+</body>
+
+</html>
